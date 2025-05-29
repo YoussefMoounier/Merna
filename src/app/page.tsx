@@ -12,7 +12,6 @@ import LoveEffect from '@/components/LoveEffect'
 import FinalMessageSection from '@/components/FinalMessageSection'
 import LoveSong from '@/components/LoveSong'
 import LoveTimeline from '@/components/LoveTimeline'
-import StarMap from '@/components/StarMap'
 import { photos, locations, secretMessages, questions, promises, memories } from '@/data/siteData'
 import dynamic from 'next/dynamic'
 
@@ -163,58 +162,6 @@ export default function Home() {
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </motion.div>
-      </section>
-
-      <div className="divider"></div>
-
-      {/* القسم الثاني: خريطة النجوم */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold mb-4 text-pink-600">خريطة نجوم حبنا</h2>
-            <p className="text-xl text-gray-600">كل نجمة تمثل لحظة من لحظات سعادتنا</p>
-          </motion.div>
-          <StarMap 
-            stars={[
-              {
-                id: 1,
-                name: "قولتلك اني بحبك",
-                description: "اليوم الي قولتلك فيه اني بحبك :)",
-                date: "12/24/2024",
-                coordinates: [20, 30],
-              },
-              {
-                id: 2,
-                name: "اول مرة شوفتك",
-                description: "اول مرة شوفتك",
-                date: "01/30/2025",
-                coordinates: [40, 50],
-              },
-              {
-                id: 3,
-                name: "أول هدية",
-                description: "في نفس اليوم الي شوفتك فيه جبتيلي فيه احلي هدية هتفضل معايا للابد",
-                date: "01/30/2025",
-                coordinates: [60, 40],
-              },
-              {
-                id: 4,
-                name: "أول هدية",
-                description: "أول هدية تبادلناها",
-                date: "1 فبراير 2024",
-                coordinates: [60, 40],
-                image: "/images/first-gift.jpg"
-              },
-            ]}
-            finalMessage="طبعاً من وسط كل النجوم الي مشيتي فيها دي مفيش احلي وارق من نجمتي ملكة النجوم واحلاهم ❤️"
-          />
-        </div>
       </section>
 
       <div className="divider"></div>
