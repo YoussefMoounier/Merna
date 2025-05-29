@@ -6,7 +6,6 @@ import PhotoGallery from '@/components/PhotoGallery'
 import LoveMap from '@/components/LoveMap'
 import SecretMessages from '@/components/SecretMessages'
 import LoveGame from '@/components/LoveGame'
-import SplashScreen from '@/components/SplashScreen'
 import Promises from '@/components/Promises'
 import BackgroundMusic from '@/components/BackgroundMusic'
 import LoveEffect from '@/components/LoveEffect'
@@ -15,6 +14,10 @@ import LoveSong from '@/components/LoveSong'
 import LoveTimeline from '@/components/LoveTimeline'
 import StarMap from '@/components/StarMap'
 import { photos, locations, secretMessages, questions, promises, memories } from '@/data/siteData'
+import dynamic from 'next/dynamic'
+
+// Dynamically import SplashScreen with ssr: false
+const DynamicSplashScreen = dynamic(() => import('../components/SplashScreen'), { ssr: false })
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true)
@@ -331,7 +334,7 @@ export default function Home() {
 
       <AnimatePresence>
         {showSplash && (
-          <SplashScreen onStart={handleSplashComplete} />
+          <DynamicSplashScreen onStart={handleSplashComplete} />
         )}
       </AnimatePresence>
     </main>

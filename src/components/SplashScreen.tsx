@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { FaHeart } from 'react-icons/fa'
 import { useState, useEffect } from 'react'
-import { AnimationControls, Transition } from 'framer-motion'
 import type { TargetAndTransition } from 'framer-motion'
 
 interface BackgroundElement {
