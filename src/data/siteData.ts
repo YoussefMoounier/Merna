@@ -97,6 +97,7 @@ export const memories = [
   },
   {
     id: 2,
+    date: 'يناير 15/ 2021',
     title: 'اول مرة اسرح في جمال حد',
     description: 'كنت لسه مقبول علي الانستا وسرحت قدام صورتك الي كنتي حطاها بروفايل وفضلت سرحان فيها برضو ',
     type: 'meeting' as const,
@@ -104,20 +105,24 @@ export const memories = [
   },
   {
     id: 3,
+    date: 'يناير 25/ 2021',
     title: 'كنت قاصد',
     description: 'كان بيبقي قصدي ارخم عليكي في الجروب واطلعك علشان نتكلم خاص :)',
     type: 'date' as const,
-    image: 'r5ama.jpg'
+    image: '/r5ama.jpg'
   },
   {
     id: 4,
+    date: 'فبراير 14/ 2021',
     title: 'وبعدين بقي',
     description: 'وبعدين بقي تاني مرة اسرح فيكي بلا هدف ',
     type: 'special' as const,
     image: '/beut2.jpg',
+    chatImage: '/images/chat2.jpg'
   },
   {
     id: 5,
+    date: 'يناير 30/ 2025',
     title: 'واخيراً',
     description: 'واخيراً حققت هدف من اهدافي الي كانت من بدري اوي وهي اني اشوفك ونتصور كمان ',
     type: 'special' as const,
